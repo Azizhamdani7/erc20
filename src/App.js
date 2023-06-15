@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import { ethers } from "ethers";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import abi from "./abi.json";
+import "./app.css";
 
-const tokenAddress = "0xe14Ae52aE4f57035ecC7C1A2E4da17Cd33C8dCC0"; // Replace with your deployed token contract address
+const tokenAddress = "0xe14Ae52aE4f57035ecC7C1A2E4da17Cd33C8dCC0";
 
 function App() {
   const [tokenBalance, setTokenBalance] = useState(0);
@@ -11,6 +12,7 @@ function App() {
   const [signer, setSigner] = useState(null);
   const [tokenName, setTokenName] = useState("");
   const [tokenSymbol, setTokenSymbol] = useState("");
+  
 
   useEffect(() => {
     async function setup() {
